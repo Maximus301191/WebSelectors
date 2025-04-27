@@ -9,8 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-
-import static java.awt.SystemColor.text;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WebSelectorsTest {
@@ -44,7 +42,7 @@ public class WebSelectorsTest {
         form.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79816589633");
         form.findElement(By.cssSelector("[data-test-id=agreement]")).click();
         form.findElement(By.cssSelector("button")).click();
-        WebElement resultElement = driver.findElement(By.cssSelector("[data-test-id=o   rder-success]"));
+        WebElement resultElement = driver.findElement(By.cssSelector("[data-test-id=order-success]"));
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", resultElement.getText().trim());
     }
 }
